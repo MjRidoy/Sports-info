@@ -22,12 +22,19 @@ hr{
     opacity: 20%;
 }
 /* header styles */
+header{
+    background-color: #161616;
+    
+}
 .top_banner{
     display: flex;
     justify-content: space-around;
-    background-color: #161616;
+    
     border-radius: 20px;
     /* height: 430px; */
+}
+.banner_img{
+    max-width: 100%;
 }
 .banner_content{
     display: flex;
@@ -91,6 +98,9 @@ hr{
 .blog{
     box-shadow: -1px 1px 10px 0px #cdc8c8;
     color:#161616;
+}
+.blog .thumbnil{
+    max-width: 100%;
 }
 .blog .thumbnil img{
     width: 295px;
@@ -182,11 +192,110 @@ hr{
     color: #ce353d;
 }
 /* mobile view responsive */
-@media screen and (max-width:667px) {
+@media screen and (max-width:687px) {
 
-    
+.container{
+    width: 100%;
+    margin-left: 0;
+    padding-bottom: 2.5em;
+}
+.top_banner{
+    flex-direction: column-reverse;
+
+}
+.all_blogs {
+    flex-direction: column;
+}
+.fix_options{
+    width: 100%;
+    padding-bottom: 5em;
+    margin-bottom: 1em;
+}
+.grid_opts{
+    grid-template-columns: repeat(1,1fr);
+    justify-content: center;
+    align-items: center;
+    grid-gap:0;
+}
+.blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer_section{
+    width: 100%;
+}
+.footer_content{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.media_icon{
+    font-size: 20px;
+}
+  
 }
 /* tablet view responsive */
-@media screen {
+@media screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+        margin-left: 0;
+        padding-bottom: 2.5em;
+    }
+    .banner_img{
+        width: 50%;
+    }
     
+    .all_blogs {
+        flex-direction: column;
+    }
+
+    .blog{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding:1em 0;
+    }
+    .blog_content{
+        width: 70%;
+        margin: auto;
+    }
+    .fix_options{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 1em;
+        background-color: #ffffff;
+        height: 60px;
+        transition: .5s;
+    }
+    .option strong:visited{
+         background-color: #ce353d;
+         color:#ffffff
+    }
+    .grid_opts{
+        grid-template-columns: repeat(2,1fr);
+        justify-content: space-around;
+        align-items: center;
+        grid-gap:10px;
+    }
+    .invisible_btn{
+        visibility: visible;
+        
+    }
+    hr{
+        width: 90%;
+        margin: auto;
+    }
+    .footer_content{
+        width: 85%;
+        margin: auto;
+    }
+    .content_option a{
+        margin: 0;
+    }
+   
+
 }
