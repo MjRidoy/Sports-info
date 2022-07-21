@@ -240,6 +240,8 @@ header{
 }
 
 .all_blogs {
+    /* flex-direction: column; */
+    display: flex;
     flex-direction: column;
 }
 
@@ -252,13 +254,13 @@ header{
     margin-left: 2em;
 }
 .fix_options{
-    width: 100%;
-    flex-direction: row;
+    width: 300px;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 2em;
-    background-color: #ffffff;
-    height: 60px;
+    background-color: #161616;
+    /* height: 60px; */
     transition: .5s;
 }
 .option strong{
@@ -266,11 +268,16 @@ header{
     width:150px;
 
 }
+.blog img{
+    width: 100%;
+}
 .grid_opts{
     grid-template-columns: repeat(2,1fr);
     justify-content: space-around;
     align-items: center;
     grid-gap:10px;
+    width: 100%;
+    ;
 }
 .invisible_btn{
     visibility: visible;
